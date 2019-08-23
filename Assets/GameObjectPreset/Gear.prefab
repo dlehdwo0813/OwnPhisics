@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212984564013659846}
   - component: {fileID: 58695950917362986}
   - component: {fileID: 50443643844209834}
-  - component: {fileID: 114350276958327808}
+  - component: {fileID: 114774904447620986}
   m_Layer: 10
   m_Name: Gear
   m_TagString: Untagged
@@ -78,7 +78,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.4
---- !u!114 &114350276958327808
+--- !u!114 &114774904447620986
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -86,10 +86,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1016707168733374}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e4bc38dbafb90b498d3e22ace0e9912, type: 3}
+  m_Script: {fileID: 11500000, guid: e4b1e6711d9bdce49a0db6e58b2262ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectTag: 0
+  objectState: 1
+  rb2d: {fileID: 0}
+  lifeTime: 1
 --- !u!212 &212984564013659846
 SpriteRenderer:
   m_ObjectHideFlags: 1

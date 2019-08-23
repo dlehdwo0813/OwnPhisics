@@ -10,11 +10,10 @@ public class ObjectPool : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start () {
+	public void Start () {
         if (objectToPool)
         {
             PoolingObject();
-            Debug.Log(transform.ToString() + " : PoolingObject");
         }
         else
         {

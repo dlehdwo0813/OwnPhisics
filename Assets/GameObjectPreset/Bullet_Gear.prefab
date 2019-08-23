@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212452430665658496}
   - component: {fileID: 58063438706003214}
   - component: {fileID: 50003564011948316}
-  - component: {fileID: 114357977951954018}
+  - component: {fileID: 114788566905427834}
   m_Layer: 10
   m_Name: Bullet_Gear
   m_TagString: Untagged
@@ -78,7 +78,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.4
---- !u!114 &114357977951954018
+--- !u!114 &114788566905427834
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -86,10 +86,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1504894609707424}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e4bc38dbafb90b498d3e22ace0e9912, type: 3}
+  m_Script: {fileID: 11500000, guid: e4b1e6711d9bdce49a0db6e58b2262ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectTag: 0
+  objectState: 0
+  lifeTime: 1
 --- !u!212 &212452430665658496
 SpriteRenderer:
   m_ObjectHideFlags: 1

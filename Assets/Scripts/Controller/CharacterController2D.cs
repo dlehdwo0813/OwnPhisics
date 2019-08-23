@@ -138,7 +138,7 @@ public class CharacterController2D : Controller2D
                     {
                         continue;
                     }
-                    if ((ob.objectTag & (int)ObjectTag.Box) > 0 && (ob.objectTag & (int)ObjectTag.Platform) == 0)
+                    if ((ob.objectTag & (int)ObjectTag.Box) > 0)
                     {
                         continue;
                     }
@@ -196,7 +196,6 @@ public class CharacterController2D : Controller2D
 
                 if (ob)
                 {
-                    Debug.Log("ob : " + ob.ToString());
                     if ((ob.objectTag & (int)ObjectTag.Circle) > 0)
                     {
                         if (moveAmount.y > 0)

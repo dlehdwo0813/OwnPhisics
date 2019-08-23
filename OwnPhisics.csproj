@@ -292,6 +292,10 @@
     <Compile Include="Assets\Add-Ons\Cinemachine\Timeline\CinemachineMixer.cs" />
     <Compile Include="Assets\Add-Ons\Cinemachine\Timeline\CinemachineShot.cs" />
     <Compile Include="Assets\Add-Ons\Cinemachine\Timeline\CinemachineTrack.cs" />
+    <Compile Include="Assets\Scripts\Basics\ButtonBasic.cs" />
+    <Compile Include="Assets\Scripts\Basics\ObjectBasic.cs" />
+    <Compile Include="Assets\Scripts\Basics\ObstacleBasic.cs" />
+    <Compile Include="Assets\Scripts\Button\ButtonTouch.cs" />
     <Compile Include="Assets\Scripts\Components\CharacterComponent.cs" />
     <Compile Include="Assets\Scripts\Controller\BoxController.cs" />
     <Compile Include="Assets\Scripts\Controller\BoxController2D.cs" />
@@ -303,14 +307,14 @@
     <Compile Include="Assets\Scripts\Environment\Water.cs" />
     <Compile Include="Assets\Scripts\Environment\WaterDetector.cs" />
     <Compile Include="Assets\Scripts\Extentoins.cs" />
+    <Compile Include="Assets\Scripts\Manager\EventManager.cs" />
     <Compile Include="Assets\Scripts\Mechanism\Hanger_Swing.cs" />
     <Compile Include="Assets\Scripts\Mechanism\Launcher.cs" />
+    <Compile Include="Assets\Scripts\Mechanism\MovementCalculator.cs" />
     <Compile Include="Assets\Scripts\Mechanism\ObjectPool.cs" />
     <Compile Include="Assets\Scripts\Object\BoxObject.cs" />
     <Compile Include="Assets\Scripts\Object\FlipBox.cs" />
     <Compile Include="Assets\Scripts\Object\Gear.cs" />
-    <Compile Include="Assets\Scripts\Object\ObjectBasic.cs" />
-    <Compile Include="Assets\Scripts\Object\Obstacle.cs" />
     <Compile Include="Assets\Scripts\Object\PlatformController.cs" />
     <Compile Include="Assets\Scripts\Object\Turret.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />

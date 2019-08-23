@@ -10,6 +10,7 @@ public class BoxController2D : Controller2D {
     public Vector2 playerInput;
 
     public LayerMask passengerMask;
+    [SerializeField]
     protected List<PassengerMovement> passengerMovement;
     protected Dictionary<Transform, Controller2D> passengerDictionary = new Dictionary<Transform, Controller2D>();
 
@@ -102,15 +103,18 @@ public class BoxController2D : Controller2D {
                 rayOrigin += Vector2.right * (verticalRaySpacing * i);
                 RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY, rayLength, passengerMask);
 
-                if (hit && hit.distance != 0 && hit.transform != transform)
+                if (hit)
                 {
-                    if (!movedPassengers.Contains(hit.transform))
+                    if (hit.distance != 0 && hit.transform != transform)
                     {
-                        movedPassengers.Add(hit.transform);
-                        float pushX = (directionY == 1) ? velocity.x : 0;
-                        float pushY = velocity.y - (hit.distance - skinWidth) * directionY;
+                        if (!movedPassengers.Contains(hit.transform))
+                        {
+                            movedPassengers.Add(hit.transform);
+                            float pushX = (directionY == 1) ? velocity.x : 0;
+                            float pushY = velocity.y - (hit.distance - skinWidth) * directionY;
 
-                        passengerMovement.Add(new PassengerMovement(hit.transform, new Vector3(pushX, pushY), directionY == 1, true));
+                            passengerMovement.Add(new PassengerMovement(hit.transform, new Vector3(pushX, pushY), directionY == 1, true));
+                        }
                     }
                 }
             }
@@ -127,15 +131,18 @@ public class BoxController2D : Controller2D {
                 rayOrigin += Vector2.up * (horizontalRaySpacing * i);
                 RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * directionX, rayLength, passengerMask);
 
-                if (hit && hit.distance != 0 && hit.transform != transform)
+                if (hit)
                 {
-                    if (!movedPassengers.Contains(hit.transform))
+                    if (hit.distance != 0 && hit.transform != transform)
                     {
-                        movedPassengers.Add(hit.transform);
-                        float pushX = velocity.x - (hit.distance - skinWidth) * directionX;
-                        float pushY = -skinWidth;
+                        if (!movedPassengers.Contains(hit.transform))
+                        {
+                            movedPassengers.Add(hit.transform);
+                            float pushX = velocity.x - (hit.distance - skinWidth) * directionX;
+                            float pushY = -skinWidth;
 
-                        passengerMovement.Add(new PassengerMovement(hit.transform, new Vector3(pushX, pushY), false, true));
+                            passengerMovement.Add(new PassengerMovement(hit.transform, new Vector3(pushX, pushY), false, true));
+                        }
                     }
                 }
             }
@@ -144,28 +151,32 @@ public class BoxController2D : Controller2D {
         // Passenger on top of a horizontally or downward moving platform
         if (directionY == -1 || velocity.y == 0 && velocity.x != 0)
         {
-            float rayLength = skinWidth * 2;
+            float rayLength = skinWidth * 3;
 
             for (int i = 0; i < verticalRayCount; i++)
             {
                 Vector2 rayOrigin = raycastOrigins.topLeft + Vector2.right * (verticalRaySpacing * i);
                 RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up, rayLength, passengerMask);
 
-                if (hit && hit.distance != 0 && hit.transform != transform)
+                if (hit)
                 {
-                    if (!movedPassengers.Contains(hit.transform))
+                    if (hit.distance != 0 && hit.transform != transform)
                     {
-                        movedPassengers.Add(hit.transform);
-                        float pushX = velocity.x;
-                        float pushY = velocity.y;
+                        if (!movedPassengers.Contains(hit.transform))
+                        {
+                            movedPassengers.Add(hit.transform);
+                            float pushX = velocity.x;
+                            float pushY = velocity.y;
 
-                        passengerMovement.Add(new PassengerMovement(hit.transform, new Vector3(pushX, pushY), true, false));
+                            passengerMovement.Add(new PassengerMovement(hit.transform, new Vector3(pushX, pushY), true, false));
+                        }
                     }
                 }
             }
         }
     }
 
+    [System.Serializable]
     public struct PassengerMovement
     {
         public Transform transform;
