@@ -43,18 +43,8 @@ public class Water : MonoBehaviour {
         bc2D.isTrigger = true;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void SpawnWater(float Left, float Width, float Top, float Bottom)
     {
-        //gameObject.AddComponent<BoxCollider2D>();
-        //gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(Left + Width / 2, Bottom + transform.localScale.y/2);
-        //gameObject.GetComponent<BoxCollider2D>().size = new Vector2(Width, Top - Bottom);
-        //gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
 
         int edgeCount = Mathf.RoundToInt(Width) * 5;
         int nodeCount = edgeCount + 1;
@@ -148,7 +138,7 @@ public class Water : MonoBehaviour {
         for (int i = 0; i < xPos.Length; i++)
         {
             float force = _springConstant * (yPos[i] - baseHeight) + velocities[i] * _damping;
-            accelerations[i] = -force/*/mass*/;
+            accelerations[i] = -force;
             yPos[i] += velocities[i];
             velocities[i] += accelerations[i];
             body.SetPosition(i, new Vector3(xPos[i], yPos[i], _z));
@@ -235,18 +225,6 @@ public class Water : MonoBehaviour {
 
             }
 
-            BoxObject box = collision.transform.GetComponent<BoxObject>();
-            if (box)
-            {
-                if (box.gravityScale != waterGravity)
-                {
-                    Debug.Log("Water : " + box.ToString());
-                    box.gravityScale = waterGravity;
-                }
-
-            }
-
-
         }
     }
 
@@ -265,33 +243,22 @@ public class Water : MonoBehaviour {
                 }
 
             }
-
-            BoxObject box = collision.transform.GetComponent<BoxObject>();
-            if (box)
-            {
-                if (box.gravityScale != 1f)
-                {
-                    Debug.Log("Water : " + box.ToString());
-                    box.gravityScale = 1f;
-                }
-
-            }
         }
 
 
     }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        Rigidbody2D rb2d = collision.transform.GetComponent<Rigidbody2D>();
-        if (rb2d != null)
-        {
-            Debug.Log("Water : " + rb2d.ToString());
-            if (rb2d.mass < 2f)
-            {
-                Debug.Log("Water : AddForce :" + rb2d.ToString());
-            }
-        }
-    }
+    //private void OnTriggerStay2D(Collider2D collision)
+    //{
+    //    Rigidbody2D rb2d = collision.transform.GetComponent<Rigidbody2D>();
+    //    if (rb2d != null)
+    //    {
+    //        Debug.Log("Water : " + rb2d.ToString());
+    //        if (rb2d.mass < 2f)
+    //        {
+    //            Debug.Log("Water : AddForce :" + rb2d.ToString());
+    //        }
+    //    }
+    //}
 
     void OnDrawGizmos()
     {

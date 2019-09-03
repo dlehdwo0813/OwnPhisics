@@ -21,7 +21,9 @@ public class Hanger_Swing : MonoBehaviour {
     {
 
         Rigidbody2D connectedBody = hj2D.connectedBody;
-        if (degMax != hj2D.limits.max)//필요 없으나 에디터 뷰에서 정확한 움직임 확인 가능
+
+        //필요 없으나 에디터 뷰에서 정확한 움직임 확인 가능
+        if (degMax != hj2D.limits.max)
         {
             JointAngleLimits2D limit = hj2D.limits;
             limit.max = degMax;

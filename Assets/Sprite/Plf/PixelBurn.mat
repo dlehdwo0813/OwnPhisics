@@ -71,18 +71,18 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _GlowAmount: 0.82
-    - _GlowCutoff: 0.25
+    - _GlowCutoff: 0.676
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _PixelLevel: 40
+    - _PixelLevel: 405
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _Speed: 1.7
     - _SrcBlend: 1
-    - _Start: 0.5
-    - _TexCutoff: 0.6
+    - _Start: 0.441
+    - _TexCutoff: 0.234
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:

@@ -73,35 +73,6 @@ public class CharacterController2D : Controller2D
         }
     }
 
-    public virtual bool HorizontalHitEvent(ref RaycastHit2D hit, Vector2 moveAmount, int index)
-    {
-        ObjectBasic ob = hit.transform.GetComponent<ObjectBasic>();
-
-        if (ob)
-        {
-            if ((ob.objectTag & (int)ObjectTag.Box) > 0)
-            {
-                BoxObject box = hit.transform.GetComponent<BoxObject>();
-                if (box)
-                {
-                    Vector2 move = moveAmount;
-                    move.y = 0;
-                    Debug.Log("HorizontalHitEvent :" + "Box");
-                    box.Move(move, false);
-                }
-            }
-        }
-
-
-        return true;
-
-    }
-    public virtual void VerticalHitEvent()
-    {
-
-
-
-    }
 
     void HorizontalCollisions(ref Vector2 moveAmount)
     {
@@ -117,14 +88,6 @@ public class CharacterController2D : Controller2D
         {
             RaycastHit2D eventHit = CollisionCheck(moveAmount * 2, i, collisionMask);
 
-            if (eventHit)
-            {
-
-                if (!HorizontalHitEvent(ref eventHit, moveAmount, i))
-                {
-                    continue;
-                }
-            }
 
             RaycastHit2D hit = CollisionCheck(moveAmount, i, collisionMask);
 

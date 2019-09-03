@@ -15,6 +15,7 @@ public class ObstacleBasic : ObjectBasic {
     public void Start () {
         objectTag = (int)ObjectTag.Circle;
         objectTag += (int)ObjectTag.Damage;
+        objectTag += (int)ObjectTag.AttachAble;
 
         rb2d = GetComponent<Rigidbody2D>();
     }

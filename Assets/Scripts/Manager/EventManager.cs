@@ -22,8 +22,8 @@ public class EventManager : MonoBehaviour {
 
     }
 
-    public delegate void GameEvent(Transform transform, int a);
-    public static GameEvent gameEvent;
+    public delegate void GameEvent(Transform transform, float timer = 0);
+    private static Event  _GameEvent;
 
 	// Use this for initialization
 	void Start () {
@@ -34,4 +34,9 @@ public class EventManager : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void AddGameEvent(Transform transform, float timer = 0)
+    {
+
+    }
 }

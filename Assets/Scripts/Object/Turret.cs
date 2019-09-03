@@ -45,24 +45,24 @@ public class Turret : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        CharacterController2D cha = collision.GetComponent<CharacterController2D>();
-        if (cha)
-        {
-            Debug.Log("CharacterController2D on");
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    CharacterController2D cha = collision.GetComponent<CharacterController2D>();
+    //    if (cha)
+    //    {
+    //        Debug.Log("CharacterController2D on");
+    //    }
+    //}
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        CharacterController2D cha = collision.GetComponent<CharacterController2D>();
-        if (cha)
-        {
-            Debug.Log("CharacterController2D off");
-        }
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    CharacterController2D cha = collision.GetComponent<CharacterController2D>();
+    //    if (cha)
+    //    {
+    //        Debug.Log("CharacterController2D off");
+    //    }
 
-    }
+    //}
 
     bool fire = false;
     private void OnTriggerStay2D(Collider2D collision)

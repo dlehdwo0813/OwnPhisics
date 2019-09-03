@@ -6,7 +6,6 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CharacterController2D))]
 [RequireComponent(typeof(BoxCollider2D))]
-[RequireComponent(typeof(SpriteRenderer))]
 //[RequireComponent(typeof(Animator))]
 public class Player : MonoBehaviour
 {
@@ -44,7 +43,8 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb2d;
     public BoxCollider2D boxCollider2D;
 
-    SpriteRenderer spriteRenderer;
+    public PlayerImage playerImage;
+
     //Animator animator;
 
     public Vector2 directionalInput;
@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
         boxCollider2D = GetComponent<BoxCollider2D>();
         rb2d.gravityScale = 0;
 
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        playerImage = GetComponentInChildren<PlayerImage>();
         //animator = GetComponent<Animator>();
 
 
@@ -176,16 +176,16 @@ public class Player : MonoBehaviour
 
         if (directionalInput.x > 0.01f)
         {
-            if (spriteRenderer.flipX == true)
+            if (playerImage.spriteRenderer.flipX == true)
             {
-                spriteRenderer.flipX = false;
+                playerImage.spriteRenderer.flipX = false;
             }
         }
         else if (directionalInput.x < -0.01f)
         {
-            if (spriteRenderer.flipX == false)
+            if (playerImage.spriteRenderer.flipX == false)
             {
-                spriteRenderer.flipX = true;
+                playerImage.spriteRenderer.flipX = true;
             }
         }
     }

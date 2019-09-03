@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gear : ObstacleBasic {
+public class Gear : ObstacleBasic
+{
 
 
     // Use this for initialization
@@ -35,6 +36,8 @@ public class Gear : ObstacleBasic {
     {
         if (!rb2d)
             return;
+        if (objectState == lastObjState)
+            return;
 
         switch (objectState)
         {
@@ -63,17 +66,21 @@ public class Gear : ObstacleBasic {
                 }
                 break;
         }
+        lastObjState = objectState;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        StateChange(ObjectState.Free);
-        //if (((int)ObjectTag.Projectile & objectTag) > 0)
-        //{
-        //    ObjectBasic obj = collision.transform.GetComponent<ObjectBasic>();
-        //    if (obj)
-        //    {
-        //    }
-        //}
+        if (objectState == ObjectState.InAir)
+        {
+            if (objectTag.isObjectTagIncluded(ObjectTag.Projectile))
+                StateChange(ObjectState.Free);
+        }
+
+    }
+
+    public override void AddVelocity(Vector2 vel,ForceMode2D forceMode2D)
+    {
+        rb2d.AddForce(vel, forceMode2D);
     }
 }

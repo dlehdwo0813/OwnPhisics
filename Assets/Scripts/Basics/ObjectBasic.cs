@@ -7,7 +7,7 @@ using UnityEngine;
 public enum ObjectTag
 {
     Player = 1, Box = 2, Circle = 4, Platform = 8
-    , Button = 0x10, Damage = 0x20, Projectile = 0x40
+    , Button = 0x10, Damage = 0x20, Projectile = 0x40, AttachAble = 0x80
 }
 
 [System.Serializable]
@@ -30,7 +30,6 @@ public class ObjectBasic : MonoBehaviour {
 	
     virtual public void StateChange(ObjectState objState)
     {
-        lastObjState = objectState;
         objectState = objState;
 
         OnStateChanged();
@@ -40,5 +39,24 @@ public class ObjectBasic : MonoBehaviour {
     {
 
     }
+
+    virtual public void DeActivate()
+    {
+        gameObject.SetActive(false);
+
+    }
+
+    virtual public void Activate()
+    {
+        gameObject.SetActive(true);
+
+    }
+
+    virtual public void AddVelocity(Vector2 vel, ForceMode2D forceMode2D)
+    {
+
+    }
+
+
 
 }

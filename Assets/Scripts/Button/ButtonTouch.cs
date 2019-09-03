@@ -9,18 +9,28 @@ public class ButtonTouch : ButtonBasic {
         base.Start();
 	}
 
-    void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        ObjectBasic obj = collision.transform.GetComponent<ObjectBasic>();
+        if (obj)
+        {
+            if(obj.objectTag.isObjectTagIncluded(ObjectTag.Box) || obj.objectTag.isObjectTagIncluded(ObjectTag.Player))
+                DeActivateObject();
+            Debug.Log(obj.ToString() + " : is on");
+        }
     }
 
-    override public void EventStart()
+
+    private void OnTriggerExit2D(Collider2D collision)
     {
-
+        ObjectBasic obj = collision.transform.GetComponent<ObjectBasic>();
+        if (obj)
+        {
+            if (obj.objectTag.isObjectTagIncluded(ObjectTag.Box) || obj.objectTag.isObjectTagIncluded(ObjectTag.Player))
+                ActivateObject();
+            Debug.Log(obj.ToString() + " : is exit");
+        }
     }
-    override public void EventEnd()
-    {
-
-    }
-
 
 }

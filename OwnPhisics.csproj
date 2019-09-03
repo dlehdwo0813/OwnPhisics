@@ -296,6 +296,10 @@
     <Compile Include="Assets\Scripts\Basics\ObjectBasic.cs" />
     <Compile Include="Assets\Scripts\Basics\ObstacleBasic.cs" />
     <Compile Include="Assets\Scripts\Button\ButtonTouch.cs" />
+    <Compile Include="Assets\Scripts\Button\UI_MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Button\UI_PopUp.cs" />
+    <Compile Include="Assets\Scripts\Button\UI_Transition.cs" />
+    <Compile Include="Assets\Scripts\Button\UI_TransitionPosition.cs" />
     <Compile Include="Assets\Scripts\Components\CharacterComponent.cs" />
     <Compile Include="Assets\Scripts\Controller\BoxController.cs" />
     <Compile Include="Assets\Scripts\Controller\BoxController2D.cs" />
@@ -303,11 +307,14 @@
     <Compile Include="Assets\Scripts\Controller\Controller2D.cs" />
     <Compile Include="Assets\Scripts\Controller\ObjectController2D.cs" />
     <Compile Include="Assets\Scripts\Controller\RaycastController.cs" />
-    <Compile Include="Assets\Scripts\Environment\PerlinNoise.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\Environment\Water.cs" />
     <Compile Include="Assets\Scripts\Environment\WaterDetector.cs" />
     <Compile Include="Assets\Scripts\Extentoins.cs" />
     <Compile Include="Assets\Scripts\Manager\EventManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Mechanism\Connector.cs" />
     <Compile Include="Assets\Scripts\Mechanism\Hanger_Swing.cs" />
     <Compile Include="Assets\Scripts\Mechanism\Launcher.cs" />
     <Compile Include="Assets\Scripts\Mechanism\MovementCalculator.cs" />
@@ -317,8 +324,13 @@
     <Compile Include="Assets\Scripts\Object\Gear.cs" />
     <Compile Include="Assets\Scripts\Object\PlatformController.cs" />
     <Compile Include="Assets\Scripts\Object\Turret.cs" />
+    <Compile Include="Assets\Scripts\Player\Hand.cs" />
+    <Compile Include="Assets\Scripts\Player\ItemDetector.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerImage.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_TextBlinking.cs" />
+    <Compile Include="Assets\tr.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Add-Ons\2D Extras\Brushes\Tint Brush Smooth\Shaders\TintedTilemap.shader" />
