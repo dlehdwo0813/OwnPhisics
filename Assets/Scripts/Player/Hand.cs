@@ -79,7 +79,7 @@ public class Hand : MonoBehaviour {
                     objectBasic.transform.parent = null;
 
                     Vector2 v2 = throwStart - throwEnd;
-                    objectBasic.StateChange(ObjectState.Free);
+                    objectBasic.StateChange(ObjectState.Air);
                     objectBasic.AddVelocity(v2 * 2, ForceMode2D.Impulse);
 
                     objectBasic = null;

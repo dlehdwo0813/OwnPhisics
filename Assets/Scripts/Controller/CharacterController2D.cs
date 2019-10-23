@@ -2,8 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterController2D : Controller2D
+public class CharacterController2D : Controller2D, IDamageAble
 {
+    #region IDamageAble
+
+    public int iMaxHP = 100;
+    public int iCurrentHP = 100;
+
+    public void Attack(IDamageAble ida)
+    {
+        //이펙트
+        //사운드
+        //ida.GetDamage(iMaxHP);
+    }
+    public void GetDamage(int damage)
+    {
+        iCurrentHP -= damage;
+        if (iCurrentHP <= 0)
+        {
+            Debug.Log(transform.ToString() + " : dead");
+        }
+    }
+
+    #endregion
 
     public float maxSlopeAngle = 80;
 
@@ -21,6 +42,9 @@ public class CharacterController2D : Controller2D
     public override void Start()
     {
         base.Start();
+
+        objectTag += (int)ObjectTag.Damage;
+        iCurrentHP = iMaxHP;
         //collisions.rope = false;
     }
 
@@ -86,8 +110,6 @@ public class CharacterController2D : Controller2D
 
         for (int i = 0; i < horizontalRayCount; i++)
         {
-            RaycastHit2D eventHit = CollisionCheck(moveAmount * 2, i, collisionMask);
-
 
             RaycastHit2D hit = CollisionCheck(moveAmount, i, collisionMask);
 

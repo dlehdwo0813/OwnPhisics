@@ -46,9 +46,9 @@ public class Launcher : MonoBehaviour {
             reloadedObject.transform.position = transform.position;
         }
 
-        if (reloadedObject.objectState != ObjectState.InAir)
+        if (reloadedObject.objectState != ObjectState.Projectile)
         {
-            reloadedObject.StateChange(ObjectState.InAir);
+            reloadedObject.StateChange(ObjectState.Projectile);
         }
         if ((reloadedObject.objectTag & (int)(ObjectTag.Projectile)) == 0)
             reloadedObject.objectTag += (int)(ObjectTag.Projectile);

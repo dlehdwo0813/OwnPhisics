@@ -24,6 +24,9 @@ public class Connector : MonoBehaviour {
         ObjectBasic obj = collision.GetComponent<ObjectBasic>();
         if (obj)
         {
+            if (obj.transform.parent) return;
+
+
             if (obj.objectTag.isObjectTagIncluded(ObjectTag.AttachAble))
             {
                 obj.transform.parent = transform;

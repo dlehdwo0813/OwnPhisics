@@ -281,20 +281,32 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="Google.IOSResolver_v1.2.124.0">
+      <HintPath>Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.124.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.JarResolver_v1.2.124.0">
+      <HintPath>Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.124.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.VersionHandler">
+      <HintPath>Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.VersionHandlerImpl_v1.2.124.0">
+      <HintPath>Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.124.0.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.Advertisements">
-      <HintPath>C:/OwnPhisics/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+      <HintPath>C:/Users/dongjae/Documents/GitHub/OwnPhisics/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/OwnPhisics/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/dongjae/Documents/GitHub/OwnPhisics/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/OwnPhisics/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/dongjae/Documents/GitHub/OwnPhisics/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/OwnPhisics/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/dongjae/Documents/GitHub/OwnPhisics/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
-      <HintPath>C:/OwnPhisics/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+      <HintPath>C:/Users/dongjae/Documents/GitHub/OwnPhisics/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\mscorlib.dll</HintPath>
@@ -381,6 +393,9 @@
   <ItemGroup>
     <None Include="Assets\Add-Ons\2D Extras\Brushes\Tint Brush Smooth\Shaders\TintedTilemap.shader" />
     <None Include="Assets\Add-Ons\Cinemachine\ReleaseNotes.txt" />
+    <None Include="Assets\GoogleMobileAds\Editor\GoogleMobileAdsDependencies.xml" />
+    <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver_v1.2.124.0.txt" />
+    <None Include="Assets\Plugins\Android\GoogleMobileAdsPlugin\AndroidManifest.xml" />
     <None Include="Assets\Scripts\Shader\BurnRevealEffect.shader" />
     <None Include="Assets\Scripts\Shader\HorizontalWave.shader" />
     <None Include="Assets\Scripts\Shader\PixelBurn3DEffect.shader" />

@@ -3,6 +3,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using Object = UnityEngine.Object;
+using UnityEditor.Tilemaps;
 
 namespace UnityEditor
 {

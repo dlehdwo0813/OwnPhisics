@@ -246,13 +246,13 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/OwnPhisics/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/dongjae/Documents/GitHub/OwnPhisics/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/OwnPhisics/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/dongjae/Documents/GitHub/OwnPhisics/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/OwnPhisics/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/dongjae/Documents/GitHub/OwnPhisics/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\mscorlib.dll</HintPath>
@@ -365,6 +365,58 @@
     <Compile Include="Assets\Add-Ons\Cinemachine\Timeline\CinemachineMixer.cs" />
     <Compile Include="Assets\Add-Ons\Cinemachine\Timeline\CinemachineShot.cs" />
     <Compile Include="Assets\Add-Ons\Cinemachine\Timeline\CinemachineTrack.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Api\AdapterStatus.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Api\AdErrorEventArgs.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Api\AdFailedToLoadEventArgs.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Api\AdLoader.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Api\AdPosition.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Api\AdRequest.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Api\AdSize.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Api\BannerView.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Api\CustomNativeEventArgs.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Api\CustomNativeTemplateAd.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Api\Gender.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Api\InitializationStatus.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Api\InterstitialAd.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Api\Mediation\MediationExtras.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Api\MobileAds.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Api\Reward.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Api\RewardBasedVideoAd.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Api\RewardedAd.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Api\ServerSideVerificationOptions.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Common\DummyClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Common\IAdLoaderClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Common\IBannerClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Common\ICustomNativeTemplateClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Common\IInitializationStatusClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Common\IInterstitialClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Common\IMobileAdsClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Common\IRewardBasedVideoAdClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Common\IRewardedAdClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Common\MobileAdsEventExecutor.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Common\RewardedAdDummyClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Common\Utils.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Platforms\Android\AdLoaderClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Platforms\Android\BannerClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Platforms\Android\CustomNativeTemplateClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Platforms\Android\InitializationStatusClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Platforms\Android\InterstitialClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Platforms\Android\MobileAdsClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Platforms\Android\RewardBasedVideoAdClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Platforms\Android\RewardedAdClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Platforms\Android\Utils.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Platforms\GoogleMobileAdsClientFactory.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\AdLoaderClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\BannerClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\CustomNativeTemplateClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\Externs.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\InitializationStatusClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\InterstitialClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\MobileAdsClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\MonoPInvokeCallbackAttribute.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\RewardBasedVideoAdClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\RewardedAdClient.cs" />
+    <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\Utils.cs" />
     <Compile Include="Assets\Scripts\Basics\ButtonBasic.cs" />
     <Compile Include="Assets\Scripts\Basics\ObjectBasic.cs" />
     <Compile Include="Assets\Scripts\Basics\ObstacleBasic.cs" />
@@ -385,6 +437,8 @@
     <Compile Include="Assets\Scripts\Environment\Water.cs" />
     <Compile Include="Assets\Scripts\Environment\WaterDetector.cs" />
     <Compile Include="Assets\Scripts\Extentoins.cs" />
+    <Compile Include="Assets\Scripts\Manager\ADManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\EffectManager.cs" />
     <Compile Include="Assets\Scripts\Manager\EventManager.cs" />
     <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
     <Compile Include="Assets\Scripts\Mechanism\Connector.cs" />
@@ -408,6 +462,9 @@
   <ItemGroup>
     <None Include="Assets\Add-Ons\2D Extras\Brushes\Tint Brush Smooth\Shaders\TintedTilemap.shader" />
     <None Include="Assets\Add-Ons\Cinemachine\ReleaseNotes.txt" />
+    <None Include="Assets\GoogleMobileAds\Editor\GoogleMobileAdsDependencies.xml" />
+    <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver_v1.2.124.0.txt" />
+    <None Include="Assets\Plugins\Android\GoogleMobileAdsPlugin\AndroidManifest.xml" />
     <None Include="Assets\Scripts\Shader\BurnRevealEffect.shader" />
     <None Include="Assets\Scripts\Shader\HorizontalWave.shader" />
     <None Include="Assets\Scripts\Shader\PixelBurn3DEffect.shader" />

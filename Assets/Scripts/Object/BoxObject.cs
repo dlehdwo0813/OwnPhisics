@@ -9,7 +9,6 @@ public class BoxObject : BoxController2D
 
     [HideInInspector]
     public Rigidbody2D rb2D;
-    Vector2 grav = new Vector2(0, -10);
     public float gravityScale = 1.0f;
 
 
